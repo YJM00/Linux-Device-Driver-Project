@@ -3,7 +3,7 @@
 > **OLED(SSD1306)** 에 **RTC(DS1302) 날짜/시간** + **DHT11 온습도**를 출력하고,  
 > **로터리 엔코더(GPIO 인터럽트)** 로 **연/월/일/시/분(등)** 을 설정합니다.
 
-- **팀원:** 유종민 | 임정민 | 허진경  
+
 - **플랫폼:** Raspberry Pi (Linux)  
 - **핵심 키워드:** Linux Kernel Module, Character Device Driver, GPIO Interrupt, I2C(SSD1306), Bit-banging(DS1302/DHT11), User ↔ Kernel ↔ Hardware
 
@@ -226,5 +226,6 @@ i2cdetect -y 1
 - OLED UI 개선(큰 폰트, 아이콘, 레이아웃)
 - udev rule로 디바이스 노드/권한 자동화
 - systemd 서비스로 부팅 시 자동 실행
+
 
 
