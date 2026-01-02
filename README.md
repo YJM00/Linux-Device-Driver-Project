@@ -62,26 +62,10 @@
 - **Rotary Encoder (CLK/DT/SW)**
 - **DHT11 (DATA 단일 핀)**
 
-### 🔌 핀맵 (⚠️ 네 코드와 다르면 여기만 수정)
-> 아래는 일반적으로 많이 쓰는 예시이며, 실제 프로젝트 코드 기준으로 맞춰서 수정하세요.
+### 🔌 회로도
+<img width="1437" height="849" alt="스크린샷 2025-12-27 135003" src="https://github.com/user-attachments/assets/14a9d071-a7fd-402f-89d4-2aacb36734bc" />
 
-#### DS1302 (예시)
-- RST: GPIO16
-- CLK: GPIO20
-- DAT: GPIO21
 
-#### Rotary Encoder (예시)
-- CLK: GPIO5
-- DT : GPIO6
-- SW : GPIO13
-
-#### DHT11 (예시)
-- DATA: GPIO4
-
-#### OLED SSD1306 (I2C)
-- `/dev/i2c-1`
-- 주소: `0x3C`
-- SDA/SCL: (일반적으로 GPIO2/GPIO3)
 
 ---
 
@@ -171,6 +155,10 @@ gcc -o app app.c
 
 ## 6) 동작 방식(요약)
 
+### FSM
+<img width="739" height="366" alt="image" src="https://github.com/user-attachments/assets/2213402e-39d3-4ff6-abc1-62949e1f09dd" />
+
+
 ### RTC 날짜/시간 표시
 - 커널 드라이버가 DS1302에서 날짜/시간을 읽어 내부 상태 갱신
 - 유저 앱이 `/dev/smart_clock`에서 `read()`로 값 수신 → OLED 표시
@@ -226,6 +214,7 @@ i2cdetect -y 1
 - OLED UI 개선(큰 폰트, 아이콘, 레이아웃)
 - udev rule로 디바이스 노드/권한 자동화
 - systemd 서비스로 부팅 시 자동 실행
+
 
 
 
