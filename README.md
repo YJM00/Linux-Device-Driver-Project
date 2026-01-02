@@ -94,7 +94,12 @@
   - `/dev/dht11_driver` 제공
 
 ---
+## 동작 영상
 
+https://github.com/user-attachments/assets/6bdd90b8-98dc-43ec-b92e-f33ea5726a6d
+
+
+---
 ## 5) 빌드 & 실행 방법
 
 ### 5-1. 커널 헤더 설치
@@ -214,6 +219,7 @@ i2cdetect -y 1
 - OLED UI 개선(큰 폰트, 아이콘, 레이아웃)
 - udev rule로 디바이스 노드/권한 자동화
 - systemd 서비스로 부팅 시 자동 실행
+
 
 
 
